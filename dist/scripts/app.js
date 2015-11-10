@@ -1,5 +1,4 @@
-angular.module('blocitoff', ['firebase']);
-angular.module('blocitoff', ['ui.router']);
+angular.module('blocitoff', ['firebase','ui.router']);
 
 angular.module('blocitoff').config(function($stateProvider, $locationProvider) {
 
