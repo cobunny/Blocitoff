@@ -1,15 +1,11 @@
-body {
-    font-family: 'Open Sans'; 
-    min-height: 100%;
-}
 body.container {
     background-color:beige;
 }
-h1.logo{
-    position: relative;
-    left: 2rem;
-    z-index: 1;
+
+.body {
+    font-family: 'Open Sans';
 }
+
 .done{
     text-decoration: line-through;
     color:fuchsia;
