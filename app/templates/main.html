@@ -1,7 +1,13 @@
-<ul>
-    <li ng-repeat="item in list">
-        <input type="checkbox" ng-model="item.done" />
-        <input type="text" ng-model="item.text" />
-        <button ng-click="list.$remove(item.done)">x</button>
-    </li>
-</ul>
+<div class="container" style="padding-top: 30px">
+    <form name="frm" ng-submit="addTodo()">
+        <input type="text" name="newTodo" ng-model="newTodo" required />
+        <button class="btn btn-success" ng-disabled="frm.$invalid">+</button>
+    </form>
+    <button class="btn btn-danger" ng-click="clearCompleted(item)">Remove Completed</button>
+    <ul class="container" style="padding-top: 30px">
+        <li ng-repeat="todo in todos">
+            <input type="checkbox" ng-model="todo.done" />
+            <span ng-class="{'done': todo.done}">{{todo.title}}</span>
+        </li>
+    </ul>
+</div>
