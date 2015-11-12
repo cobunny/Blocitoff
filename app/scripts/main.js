@@ -12,10 +12,15 @@
                 $scope.newTodo.title = '';
             });
         };
+        $scope.updateTodoItem = function (todo) {
+            $scope.todos.$save(todo).then(function (data) {});
+        };
         $scope.clearCompleted = function (todo) {
-            $scope.todos.$remove(todo).then(function () {
-                return !todo.done;
-            });
+            if (todo.done === true) {
+                $scope.todos.$remove(todo).then(function () {
+                    return !todo.done;
+                });
+            }
         };
     }]);
 }());

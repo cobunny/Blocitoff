@@ -11,26 +11,26 @@ angular.module('blocitoff')
         $stateProvider.state('main', {
             url: '/',
             controller: 'Main.controller',
-            templateUrl: 'templates/main.html'
+            templateUrl: '/templates/main.html'
         });
         $stateProvider.state('devise', {
             url: '/devise',
             controller: 'Devise.controller',
-            templateUrl: 'templates/devise.html'
+            templateUrl: '/templates/devise.html'
         });
         $stateProvider.state('layouts', {
             url: '/layouts',
             controller: 'Layouts.controller',
-            templateUrl: 'templates/layouts.html'
+            templateUrl: '/templates/layouts.html'
         });
         $stateProvider.state('lists', {
             url: '/lists',
             controller: 'Lists.controller',
-            templateUrl: 'templates/lists.html'
+            templateUrl: '/templates/lists.html'
         });
         $stateProvider.state('tasks', {
             url: '/tasks',
             controller: 'Tasks.controller',
-            templateUrl: 'templates/tasks.html'
+            templateUrl: '/templates/tasks.html'
         });
     });

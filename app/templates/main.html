@@ -12,8 +12,8 @@
     <div>
         <ul>
             <li ng-repeat="todo in todos">
-                <input type="checkbox" ng-model="todo.done" />
-                <span ng-class="{'done': todo.done}">{{todo.title}}</span>
+                <input type="checkbox" ng-model="todo.done" ng-change="updateTodoItem(todo)" />
+                <span ng-class="{done: todo.done}">{{todo.title}}</span>
                 <div class="button">
                     <button class="btn btn-danger" ng-disabled="newTodo.$invalid" ng-click="clearCompleted(todo)">Done!</button>
                 </div>
