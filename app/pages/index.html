@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="blocitoff">
+
 <head lang="en">
     <meta charset="UTF-8">
     <title>Blocitoff</title>
@@ -13,8 +14,11 @@
     <link rel="stylesheet" type="text/css" href="/styles/lists.css">
     <link rel="stylesheet" type="text/css" href="/styles/tasks.css">
 </head>
-<body class="container" style="padding-top:30px">
-    <h1 class="heading">Blocitoff</h1>
+
+<body class="container">
+    <div class="heading">
+        <h1 class="title">Blocitoff</h1>
+    </div>
     <div ui-view></div>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
@@ -28,4 +32,5 @@
     <script src="/scripts/lists.js"></script>
     <script src="/scripts/tasks.js"></script>
 </body>
+
 </html>

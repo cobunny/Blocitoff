@@ -1,12 +1,25 @@
-body.container {
-    background-color:beige;
-}
-
 .body {
-    font-family: 'Open Sans';
+    padding-top: 5rem;
 }
 
-.done{
+label {
+    font-size: 1.5rem;
+}
+
+span {
+    padding-right: 3rem;
+    font-size: 1.9rem;
+}
+
+.done {
     text-decoration: line-through;
-    color:fuchsia;
+    color: fuchsia;
+}
+
+.container {
+    padding-top: 2rem;
+}
+
+.button {
+    padding: 1.5rem;
 }

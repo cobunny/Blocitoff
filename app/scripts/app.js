@@ -9,7 +9,7 @@ angular.module('blocitoff')
             requireBase: false
         });
         $stateProvider.state('main', {
-            url: '/main',
+            url: '/',
             controller: 'Main.controller',
             templateUrl: 'templates/main.html'
         });
