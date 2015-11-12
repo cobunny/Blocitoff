@@ -1,14 +1,12 @@
-.body {
-    padding-top: 5rem;
+.container {
+    position: relative;
+    margin:0 auto;
+    max-width: 64rem;
 }
 
-label {
-    font-size: 1.5rem;
-}
-
-span {
-    padding-right: 3rem;
-    font-size: 1.9rem;
+.form {
+    position: relative;
+    margin: 2rem auto;
 }
 
 .done {
@@ -16,10 +14,18 @@ span {
     color: fuchsia;
 }
 
-.container {
-    padding-top: 2rem;
+.field {
+    text-align: center;
+}
+
+label {
+    text-align: center;
+}
+
+span {
+    font-size: 1.9rem;
 }
 
 .button {
-    padding: 1.5rem;
+    font-size: 0.6rem;
 }
