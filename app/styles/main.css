@@ -2,6 +2,14 @@
     position: relative;
     margin:0 auto;
     max-width: 64rem;
+    background-image: url("/assets/images/paper_bg.jpg");
+    font-family:"arial", "openSans";
+}
+
+.header {
+    font-family: "comic sans ms", "arial", "opensans";
+    text-align: center;
+    padding-bottom: 5rem;
 }
 
 .form {
