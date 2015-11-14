@@ -1,6 +1,5 @@
-angular.module('blocitoff', ['firebase', 'ui.router']);
-
-angular.module('blocitoff')
+angular
+    .module('blocitoff', ['firebase', 'ui.router'])
     .constant('FBURL', 'https://ng-blocitoff.firebaseio.com/')
     .config(function ($stateProvider, $locationProvider) {
 
@@ -23,14 +22,14 @@ angular.module('blocitoff')
             controller: 'Layouts.controller',
             templateUrl: '/templates/layouts.html'
         });
-        $stateProvider.state('lists', {
-            url: '/lists',
-            controller: 'Lists.controller',
-            templateUrl: '/templates/lists.html'
+        $stateProvider.state('archivedTasks', {
+            url: '/archivedTasks',
+            controller: 'ArchivedTasks.controller',
+            templateUrl: '/templates/archivedTasks.html'
         });
-        $stateProvider.state('tasks', {
-            url: '/tasks',
-            controller: 'Tasks.controller',
-            templateUrl: '/templates/tasks.html'
+        $stateProvider.state('completedTasks', {
+            url: '/completedTasks',
+            controller: 'CompletedTasks.controller',
+            templateUrl: '/templates/completedTasks.html'
         });
     });

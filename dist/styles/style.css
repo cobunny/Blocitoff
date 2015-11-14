@@ -7,8 +7,8 @@
 }
 
 html {
-    height: 100%;
-    /* makes sure our HTML takes up 100% of the browser window */
+    /* makes sure HTML takes up 100% of the browser window */
+    height: 100%; 
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     background-image: url("/assets/images/Blocitoff_bg.jpg");
 }
 
-body.main {
+body.Blocitoff {
     background-color: lavenderblush;
 }
 
@@ -33,3 +33,27 @@ body.main {
     left: 2rem;
     cursor: pointer;
 }
+
+.links-container {
+    height: 40px;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+a.completed {
+    color: limegreen;
+    text-decoration: none;
+    float:left;
+}
+
+a.archived {
+    color: darkorange;
+    text-decoration: none;
+    float: right;
+}
+a.main {
+    color: deepskyblue;
+    text-decoration: none;
+}
+

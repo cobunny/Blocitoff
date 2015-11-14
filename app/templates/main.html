@@ -1,22 +1,20 @@
 <div class="container">
-   <h1 class="header">Blocitoff</h1>
-    <form class="form" name="frm" ng-submit="addTodo()">
-        <div class="field">
-            <label>
-                <h7>New Todo</h7>
-            </label>
+    <h1 class="main-title">Blocitoff</h1>
+    <form name="frm" ng-submit="addTask()">
+        <div class="form-group">
+            <label for="newTask">New Task</label>
             </br>
-            <input type="text" name="newTodo" ng-model="newTodo.title" required />
-            <button class="btn btn-success" ng-disabled="frm.$invalid">+</button>
+        <input class="form-control" type="text" name="newTask" placeholder="Add a task..." ng-model="newTask.title" required />
+            <button class="btn btn-success" ng-disabled="frm.$invalid">Just do it !</button>
         </div>
     </form>
     <div>
-        <ul>
-            <li ng-repeat="todo in todos">
-                <input type="checkbox" ng-model="todo.done" ng-change="updateTodoItem(todo)" />
-                <span ng-class="{done: todo.done}">{{todo.title}}</span>
+        <ul class="list">
+            <li ng-repeat="Task in Tasks">
+                <input type="checkbox" ng-model="Task.done" ng-change="updateTaskItem(Task)" />
+                <span ng-class="{done: Task.done}">{{Task.title}}</span>
                 <div class="button">
-                    <button class="btn btn-danger" ng-disabled="newTodo.$invalid" ng-click="clearCompleted(todo)">Done!</button>
+                    <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="clearCompleted(Task)">Done!</button>
                 </div>
             </li>
         </ul>

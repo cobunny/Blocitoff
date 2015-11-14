@@ -1,0 +1,14 @@
+h1.archivedTasks-title {
+    font-family: "comic sans ms", "arial", "opensans";
+    text-align: center;
+    padding-bottom: 5rem;
+    color: darkorange;
+}
+form {
+    text-align: center;
+}
+
+form.form-group {
+    position: relative;
+    margin: 2rem auto;
+}

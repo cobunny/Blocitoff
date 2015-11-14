@@ -4,17 +4,30 @@
     max-width: 64rem;
     background-image: url("/assets/images/paper_bg.jpg");
     font-family:"arial", "openSans";
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-.header {
+h1.main-title {
     font-family: "comic sans ms", "arial", "opensans";
     text-align: center;
     padding-bottom: 5rem;
+    color: deepskyblue;
 }
 
-.form {
+form {
+    text-align: center;
+}
+
+form.form-group {
     position: relative;
     margin: 2rem auto;
+}
+
+.form-control {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .done {
@@ -22,18 +35,13 @@
     color: fuchsia;
 }
 
-.field {
-    text-align: center;
-}
-
 label {
     text-align: center;
 }
 
-span {
-    font-size: 1.9rem;
+ul.list {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.button {
-    font-size: 0.6rem;
-}
