@@ -1,18 +1,18 @@
 <div class="container">
-<!--    <h1 class="main-title">Blocitoff</h1>-->
+    <!--<h1 class="main-title">Blocitoff</h1>-->
     <form name="frm" ng-submit="addTask()">
         <div class="form-group">
             <label for="newTask">Do Something</label>
             </br>
-        <input class="form-control" type="text" name="newTask" placeholder="Add a task..." ng-model="newTask.title" required />
+            <input class="form-control" type="text" name="newTask" placeholder="Add a task..." ng-model="newTask.title" required />
         </div>
     </form>
     <div>
         <ul class="list">
-            <li ng-repeat="Task in Tasks">
+            <li ng-repeat="Task in Tasks" ng-hide="clearCompleted(Task)">
                 <input type="checkbox" ng-model="Task.done" ng-change="updateTaskItem(Task)" />
                 <span ng-class="{done: Task.done}">{{Task.title}}</span>
-               <!-- <div class="button">
+                <!-- <div class="button">
                     <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="clearCompleted(Task)">Done!</button>
                 </div>-->
             </li>

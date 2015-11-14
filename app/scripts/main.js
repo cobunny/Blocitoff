@@ -5,20 +5,24 @@
         $scope.Tasks = $firebaseArray(listRef);
         $scope.newTask = {
             title: '',
-            done: false
+            done: false,
+            timeCreated: new Date().getTime()
         };
+
         $scope.addTask = function () {
             $scope.Tasks.$add($scope.newTask).then(function (data) {
                 $scope.newTask.title = '';
             });
         };
+
+        $scope.clearCompleted = function (task) {
+            return task.done ? true : false;
+        };
+
         $scope.updateTaskItem = function (Task) {
             $scope.Tasks.$save(Task).then(function (data) {
-                if (Task.done === true) {
-                    $scope.Tasks.$remove(Task).then(function () {
-                        return !Task.done;
-                    });
-                }
+                $scope.clearCompleted(Task);
+                return Task;
             });
         };
     }]);
