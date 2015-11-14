@@ -13,14 +13,13 @@
             });
         };
         $scope.updateTaskItem = function (Task) {
-            $scope.Tasks.$save(Task).then(function (data) {});
-        };
-        $scope.clearCompleted = function (Task) {
-            if (Task.done === true) {
-                $scope.Tasks.$remove(Task).then(function () {
-                    return !Task.done;
-                });
-            }
+            $scope.Tasks.$save(Task).then(function (data) {
+                if (Task.done === true) {
+                    $scope.Tasks.$remove(Task).then(function () {
+                        return !Task.done;
+                    });
+                }
+            });
         };
     }]);
 }());
