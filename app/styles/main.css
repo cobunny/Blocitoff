@@ -8,24 +8,25 @@
     padding-left: 15px;
 }
 
-h1.main-title {
+/*h1.main-title {
     font-family: "comic sans ms", "arial", "opensans";
+    font-size: 2.5rem;
     text-align: center;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
     color: deepskyblue;
-}
+}*/
 
 form {
     text-align: center;
+    margin-top: 25px;
 }
 
 form.form-group {
     position: relative;
-    margin: 2rem auto;
 }
 
 .form-control {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,7 +41,7 @@ label {
 }
 
 ul.list {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
