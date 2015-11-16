@@ -1,4 +1,6 @@
 (function() {
     'use strict';
-    angular.module('blocitoff').controller('CompletedTasks.controller', function($scope) {});
+    angular.module('blocitoff').controller('CompletedTasks.controller', function($scope) {
+        
+    });
 }());
