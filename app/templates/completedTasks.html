@@ -1,7 +1,8 @@
 <div class="container">
     <ul class="list">
-        <li ng-repeat="completedTask in completedTasks">
+        <li ng-repeat="completedTask in Tasks" ng-show="completedTask.done">
             {{completedTask.title}}
+            <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="remove(completedTask)">x</button>
         </li>
     </ul>
 </div>

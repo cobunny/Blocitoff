@@ -9,7 +9,7 @@
     </form>
     <div>
         <ul class="list">
-            <li ng-repeat="Task in Tasks" ng-hide="clearCompleted(Task)">
+            <li ng-repeat="Task in Tasks">
                 <input type="checkbox" ng-model="Task.done" ng-change="updateTaskItem(Task)" />
                 <span ng-class="{done: Task.done}">{{Task.title}}</span>
             </li>

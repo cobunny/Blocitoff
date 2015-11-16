@@ -2,8 +2,9 @@
     'use strict';
     angular.module('blocitoff').controller('CompletedTasks.controller', ['$scope', '$firebaseArray', 'FBURL', function ($scope, $firebaseArray, FBURL) {
         var listRef = new Firebase(FBURL);
-        listRef.on('value', function (snapshot, prevChildKey) {
-            $scope.completedTasks = snapshot.val();
-        });
+        $scope.Tasks = $firebaseArray(listRef);
+        $scope.remove = function (completedTask) {
+            $scope.Tasks.$remove(completedTask);
+        }; 
     }]);
 }());
