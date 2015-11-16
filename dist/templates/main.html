@@ -12,9 +12,6 @@
             <li ng-repeat="Task in Tasks" ng-hide="clearCompleted(Task)">
                 <input type="checkbox" ng-model="Task.done" ng-change="updateTaskItem(Task)" />
                 <span ng-class="{done: Task.done}">{{Task.title}}</span>
-                <!-- <div class="button">
-                    <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="clearCompleted(Task)">Done!</button>
-                </div>-->
             </li>
         </ul>
     </div>

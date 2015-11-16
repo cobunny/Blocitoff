@@ -21,6 +21,9 @@
 
         $scope.updateTaskItem = function (Task) {
             $scope.Tasks.$save(Task).then(function (data) {
+               /* $scope.Tasks.$remove(Task).then(function () {
+                    return !Task.done;
+                });*/
                 $scope.clearCompleted(Task);
                 return Task;
             });

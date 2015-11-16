@@ -47,13 +47,45 @@ a.completed {
     float:left;
 }
 
+.links-container a.completed:hover {
+    color: gold;
+    text-decoration: none;
+}
+.links-container a.completed:hover:active {
+    color: rgb(233,50,117);
+    background-color: bisque;
+    text-decoration: none;
+}
+
 a.archived {
     color: darkorange;
     text-decoration: none;
     float: right;
 }
+
+.links-container a.archived:hover {
+    color: gold;
+    text-decoration: none;
+}
+
+.links-container a.archived:hover:active {
+    color: rgb(233,50,117);
+    background-color: bisque;
+    text-decoration: none;
+}
+
 a.main {
     color: deepskyblue;
+    text-decoration: none;
+}
+
+.links-container a.main:hover {
+    color: gold;
+    text-decoration: none;
+}
+.links-container a.main:hover:active {
+    color: rgb(233,50,117);
+    background-color: bisque;
     text-decoration: none;
 }
 

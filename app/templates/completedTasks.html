@@ -1,4 +1,7 @@
 <div class="container">
-    <form name="frm">
-    </form>
+    <ul class="list">
+        <li ng-repeat="completedTask in completedTasks">
+            {{completedTask.title}}
+        </li>
+    </ul>
 </div>
