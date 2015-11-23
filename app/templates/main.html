@@ -1,5 +1,4 @@
 <div class="container">
-    <!--<h1 class="main-title">Blocitoff</h1>-->
     <form name="frm" ng-submit="addTask()">
         <div class="form-group">
             <label for="newTask">Do Something</label>
@@ -9,8 +8,9 @@
     </form>
     <div>
         <ul class="list">
-            <li ng-repeat="Task in Tasks">
+            <li ng-repeat="Task in Tasks | filter: expired" ng-hide="Task.isExpired || Task.done">
                 <input type="checkbox" ng-model="Task.done" ng-change="updateTaskItem(Task)" />
+                <!--CSS Line-through isn't working for '.done' class -->
                 <span ng-class="{done: Task.done}">{{Task.title}}</span>
             </li>
         </ul>

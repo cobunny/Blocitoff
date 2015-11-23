@@ -5,6 +5,6 @@
         $scope.Tasks = $firebaseArray(listRef);
         $scope.remove = function (completedTask) {
             $scope.Tasks.$remove(completedTask);
-        }; 
+        };
     }]);
 }());

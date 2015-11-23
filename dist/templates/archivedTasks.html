@@ -1,4 +1,8 @@
 <div class="container">
-    <form name="frm">
-    </form>
+    <ul class="list">
+        <li ng-repeat="archivedTask in Tasks | filter: expired" ng-show="archivedTask.isExpired">
+            {{archivedTask.title}}
+            <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="remove(archivedTask)">x</button>
+        </li>
+    </ul>
 </div>
