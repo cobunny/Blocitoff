@@ -1,8 +1,14 @@
 <div class="container">
-    <ul class="list">
-        <li ng-repeat="completedTask in Tasks" ng-show="completedTask.done">
-            {{completedTask.title}}
-            <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="remove(completedTask)">x</button>
-        </li>
-    </ul>
+    <table class="table">
+        <tr>
+            <th class="col-md-9">Completed Tasks</th>
+            <th class="col-md-3">Priority</th>
+        </tr>
+        <tr ng-repeat="completedTask in Tasks | orderBy:sortorder" ng-show="completedTask.done" ng-click="incompleted(completedTask)">
+            <td>
+                {{completedTask.title}}
+            </td>
+            <td>{{completedTask.priority}}</td>
+        </tr>
+    </table>
 </div>

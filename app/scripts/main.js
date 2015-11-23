@@ -2,13 +2,14 @@
     'use strict';
     angular.module('blocitoff').controller('Main.controller', ['$scope', '$firebaseArray', 'FBURL', 'taskExpiration', function ($scope, $firebaseArray, FBURL, taskExpiration) {
         var listRef = new Firebase(FBURL);
-        $scope.sortorder = 'title';
+        $scope.sortorder = 'priority';
         $scope.Tasks = $firebaseArray(listRef);
         $scope.newTask = {
             title: '',
             done: false,
             timeCreated: new Date().getTime(),
-            isExpired: false
+            isExpired: false,
+            priority: 'High'
         };
 
         $scope.expired = function (Task) {
@@ -30,9 +31,11 @@
         };
 
         $scope.updateTaskItem = function (Task) {
-            $scope.Tasks.$save(Task).then(function (data) {
-                return Task;
-            });
+            $scope.Tasks.$save(Task).then(function (data) {});
+        };
+
+        $scope.remove = function (Task) {
+            $scope.Tasks.$remove(Task);
         };
     }]);
 }());
