@@ -1,7 +1,7 @@
 angular
     .module('blocitoff', ['firebase', 'ui.router'])
     .constant('FBURL', 'https://ng-blocitoff.firebaseio.com/')
-    .value('taskExpiration', '1')
+    .value('taskExpiration', '604800000')
     .config(function ($stateProvider, $locationProvider) {
 
         $locationProvider.html5Mode({

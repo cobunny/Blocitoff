@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('blocitoff').controller('Main.controller', ['$scope', '$firebaseArray', 'FBURL', function ($scope, $firebaseArray, FBURL) {
+    angular.module('blocitoff').controller('Main.controller', ['$scope', '$firebaseArray', 'FBURL', 'taskExpiration', function ($scope, $firebaseArray, FBURL, taskExpiration) {
         var listRef = new Firebase(FBURL);
         $scope.sortorder = 'title';
         $scope.Tasks = $firebaseArray(listRef);
@@ -15,14 +15,14 @@
             var timeNow = new Date().getTime();
             var expired = [];
             if (!Task.done) {
-                if(timeNow-Task.timeCreated >300000 ) {
+                if (timeNow - Task.timeCreated > taskExpiration) {
                     Task.isExpired = true;
                     expired.push(Task);
                 }
             }
             return expired;
         };
-        
+
         $scope.addTask = function () {
             $scope.Tasks.$add($scope.newTask).then(function (data) {
                 $scope.newTask.title = '';
