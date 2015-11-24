@@ -1,8 +1,14 @@
 <div class="container">
-    <ul class="list">
-        <li ng-repeat="archivedTask in Tasks | filter: expired" ng-show="archivedTask.isExpired">
-            {{archivedTask.title}}
-            <button class="btn btn-danger" ng-disabled="newTask.$invalid" ng-click="remove(archivedTask)">x</button>
-        </li>
-    </ul>
+    <table class="table">
+        <tr>
+            <th class="col-md-9">Archived Tasks</th>
+            <th class="col-md-3">Priority</th>
+        </tr>
+        <tr ng-repeat="archivedTask in Tasks | orderBy:sortorder" ng-show="archivedTask.isExpired" ng-click="activate(archivedTask)">
+            <td>
+                {{archivedTask.title}}
+            </td>
+            <td>{{archivedTask.priority}}</td>
+        </tr>
+    </table>
 </div>

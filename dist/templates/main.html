@@ -20,7 +20,7 @@
             <th class="col-md-2">Priority</th>
             <th class="col-md-2">Remove</th>
         </tr>
-        <tr ng-repeat="Task in Tasks | filter: expired | orderBy:sortorder" ng-hide="Task.isExpired || Task.done">
+        <tr ng-repeat="Task in Tasks | filter:expired | orderBy:sortorder" ng-hide="Task.isExpired || Task.done">
             <td>
                 <input type="checkbox" ng-model="Task.done" ng-change="updateTaskItem(Task)" />
                 <!--CSS Line-through isn't working for '.done' class -->
