@@ -16,7 +16,7 @@
             var timeNow = new Date().getTime();
             var expired = [];
             if (!Task.done) {
-                if(timeNow-Task.timeCreated >taskExpiration) {
+                if (timeNow - Task.timeCreated > taskExpiration) {
                     Task.isExpired = true;
                     $scope.Tasks.$save(Task).then(function (data) {});
                     expired.push(Task);

@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('blocitoff').controller('ArchivedTasks.controller', ['$scope', '$firebaseArray', 'FBURL', 'taskExpiration', function ($scope, $firebaseArray, FBURL, taskExpiration) {
+    angular.module('blocitoff').controller('ArchivedTasks.controller', ['$scope', '$firebaseArray', 'FBURL', function ($scope, $firebaseArray, FBURL) {
         var listRef = new Firebase(FBURL);
         $scope.Tasks = $firebaseArray(listRef);
         $scope.sortorder = 'priority';

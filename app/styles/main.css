@@ -1,11 +1,14 @@
-.container {
-    position: relative;
-    margin:0 auto;
-    max-width: 64rem;
-    background-image: url("/assets/images/paper_bg.jpg");
-    font-family:"arial", "openSans";
-    padding-right: 15px;
-    padding-left: 15px;
+.panel-primary {
+    border: 0 solid transparent;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #92D410;
+    border: 0 solid transparent;
+}
+
+.panel-title {
+    text-align: center;
 }
 
 form {
@@ -31,8 +34,3 @@ form.form-group {
 label {
     text-align: center;
 }
-
-
-
-
-

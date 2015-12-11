@@ -8,18 +8,14 @@
 
 html {
     /* makes sure HTML takes up 100% of the browser window */
-    height: 100%; 
-}
-
-body {
-    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-    color: black;
-    min-height: 100%;
-    background-image: url("/assets/images/Blocitoff_bg.jpg");
+    height: 100%;
 }
 
 body.Blocitoff {
-    background-color: lavenderblush;
+    background-color: whitesmoke;
+    color: dimgrey;
+    min-height: 100%;
+    background-image: url("/assets/images/Blocitoff_bg.jpg");
 }
 
 .navbar {
@@ -42,50 +38,34 @@ body.Blocitoff {
 }
 
 a.completed {
-    color: limegreen;
-    text-decoration: none;
-    float:left;
-}
-
-.links-container a.completed:hover {
-    color: gold;
-    text-decoration: none;
-}
-.links-container a.completed:hover:active {
-    color: rgb(233,50,117);
-    background-color: bisque;
-    text-decoration: none;
+    font-weight: 500;
+    color: dimgrey;
+    float: left;
 }
 
 a.archived {
-    color: darkorange;
-    text-decoration: none;
+    font-weight: 500;
+    color: dimgrey;
     float: right;
 }
 
-.links-container a.archived:hover {
-    color: gold;
-    text-decoration: none;
-}
-
-.links-container a.archived:hover:active {
-    color: rgb(233,50,117);
-    background-color: bisque;
-    text-decoration: none;
-}
-
 a.main {
-    color: deepskyblue;
+    font-weight: 500;
+    color: dimgrey;
+}
+
+.links-container a:hover {
+    color: #2cc0dd;
     text-decoration: none;
 }
 
-.links-container a.main:hover {
-    color: gold;
-    text-decoration: none;
-}
-.links-container a.main:hover:active {
-    color: rgb(233,50,117);
-    background-color: bisque;
-    text-decoration: none;
+.links-container a:hover:active {
+    color: #2cc0dd;
+    background-color: darkseagreen;
 }
 
+.links-container a:focus {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}

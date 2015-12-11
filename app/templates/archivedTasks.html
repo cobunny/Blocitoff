@@ -1,14 +1,12 @@
-<div class="container">
-    <table class="table">
-        <tr>
-            <th class="col-md-9">Archived Tasks</th>
-            <th class="col-md-3">Priority</th>
-        </tr>
-        <tr ng-repeat="archivedTask in Tasks | orderBy:sortorder" ng-show="archivedTask.isExpired" ng-click="activate(archivedTask)">
-            <td>
-                {{archivedTask.title}}
-            </td>
-            <td>{{archivedTask.priority}}</td>
-        </tr>
-    </table>
-</div>
+<table class="table">
+    <tr>
+        <th class="col-md-9">Archived Tasks</th>
+        <th class="col-md-3">Priority</th>
+    </tr>
+    <tr ng-repeat="archivedTask in Tasks | orderBy:sortorder" ng-show="archivedTask.isExpired" ng-click="activate(archivedTask)">
+        <td>
+            {{archivedTask.title}}
+        </td>
+        <td>{{archivedTask.priority}}</td>
+    </tr>
+</table>
