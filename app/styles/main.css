@@ -1,3 +1,7 @@
+.panel {
+    min-height: 600px;
+}
+
 .panel-primary {
     border: 0 solid transparent;
 }
